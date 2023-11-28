@@ -104,5 +104,19 @@ namespace ChangeConfig
             MessageBox.Show("Arquivo config.ini foi atualizado!", "Atualizado!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
 
         }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox1.Checked)
+            {
+                txt_user.ReadOnly = false;
+                txt_pwd.ReadOnly = false;
+            }
+            else
+            {
+                txt_user.ReadOnly = true;
+                txt_pwd.ReadOnly = true;
+            }
+        }
     }
 }
